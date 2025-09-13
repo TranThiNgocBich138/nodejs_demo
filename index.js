@@ -3,8 +3,15 @@ function showInfo(name, age) {
     console.log(`Tên: ${name}, Tuổi: ${age}`);
 }
 
-// Gọi thử hàm
-showInfo("Bình", 20);
-showInfo("Bích", 23);
-showInfo("Bảo", 22);
-showInfo("Bằng", 21);
+// Hàm tính tuổi từ năm sinh
+function calcAge(yearOfBirth) {
+    const currentYear = new Date().getFullYear();
+    return currentYear - yearOfBirth;
+}
+
+// Gọi thử
+const age1 = calcAge(2000);
+showInfo("Bình", age1);
+
+const age2 = calcAge(2002);
+showInfo("Bích", age2);
